@@ -26,3 +26,5 @@ const _calculation = (
 }
 
 _calculation(3, 5, displayer) // Following value is passed in here : 7
+
+// callbacks shine in async functions, where one function has to wait for another function
