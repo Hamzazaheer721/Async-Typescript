@@ -19,3 +19,17 @@ func().then(
     console.log(_error)
   }
 )
+
+// keyword await makes the function wait for a promise
+// await can be used inside of async function
+
+const asyncFunc = async () => {
+  const promise = new Promise((resolve, reject) => {
+    reject("I am rejecting it on purpose")
+  })
+  const response = await promise
+    .then((_val) => console.log("Resolve : ", _val))
+    .catch((_err) => console.log("Rejected :", _err))
+}
+
+asyncFunc()
